@@ -3,7 +3,17 @@
   <hero></hero>
 </header>
 <main>
-  <div>
-    <h1>Found in {{ $ctrl.name }}.html</h1>
+  <div class="main">
+    <h1>Give me something to echo:</h1>
+    <form ng-submit="$ctrl.send()">
+      <input class="main-input" type="text" ng-model="value" name="stuff" ng-value="value">
+      <input type="submit" class="submit-button">
+    </form>
+    <div ng-class="{'echos': messages.length, 'no-echos': !messages.length}">
+      <h2 ng-if="messages.length">
+        Your Echos:
+      </h2>
+      <echo-item ng-repeat="message in messages track by $index" message="message"></echo-item>
+    </div>
   </div>
 </main>

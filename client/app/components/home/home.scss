@@ -1,3 +1,42 @@
 .home {
-  color: red;
+	color: red;
+}
+
+.main {
+  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+  align-items: center;
+  
+  .no-echos {
+    opacity: 0;
+    transition: all 2s;
+  }
+
+  .echos {
+    opacity: 1;
+    background: rgba(98, 122, 246, 0.4);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    padding-left: 5%;
+    margin-top: 20px;
+    transition: all .5s;
+  }
+
+  .main-input {
+    margin-right: 50px;
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 1px lightgrey;
+    border: none
+  }
+
+  .submit-button {
+    box-shadow: 3px 4px 11px grey;
+    background: #C39788;
+    border-radius: 7px;
+    border: none;
+    padding: 6px;
+  }
 }
